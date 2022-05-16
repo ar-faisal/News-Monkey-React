@@ -93,29 +93,29 @@ export default class Navbar extends Component {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" id="nav1" style={{'textAlign':'center'}} href="#" onClick={() => { this.category('') }}>Home</a>
+                                    <button className="nav-link btn btn-link active" aria-current="page" id="nav1" style={{'textAlign':'center'}} onClick={() => { this.category('') }}>Home</button>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" id="nav2" style={{'textAlign':'center'}} href="#" onClick={() => { this.category('business') }}>Business</a>
+                                    <button className="nav-link btn btn-link" id="nav2" style={{'textAlign':'center'}} onClick={() => { this.category('business') }}>Business</button>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" id="nav3" style={{'textAlign':'center'}} href="#" onClick={() => { this.category('entertainment') }}>Entertainment</a>
+                                    <button className="nav-link btn btn-link" id="nav3" style={{'textAlign':'center'}} onClick={() => { this.category('entertainment') }}>Entertainment</button>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" id="nav4" style={{'textAlign':'center'}} href="#" onClick={() => { this.category('general') }}>General</a>
+                                    <button className="nav-link btn btn-link" id="nav4" style={{'textAlign':'center'}} onClick={() => { this.category('general') }}>General</button>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" id="nav5" style={{'textAlign':'center'}} href="#" onClick={() => { this.category('health') }}>Health</a>
+                                    <button className="nav-link btn btn-link" id="nav5" style={{'textAlign':'center'}} onClick={() => { this.category('health') }}>Health</button>
+                                </li> 
+                                <li className="nav-item">
+                                    <button className="nav-link btn btn-link" id="nav6" style={{'textAlign':'center'}} onClick={() => { this.category('science') }}>Science</button>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" id="nav6" style={{'textAlign':'center'}} href="#" onClick={() => { this.category('science') }}>Science</a>
+                                    <button className="nav-link btn btn-link" id="nav7" style={{'textAlign':'center'}} onClick={() => { this.category('sports') }}>Sports</button>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" id="nav7" style={{'textAlign':'center'}} href="#" onClick={() => { this.category('sports') }}>Sports</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" id="nav8" style={{'textAlign':'center'}} href="#" onClick={() => { this.category('technology') }}>Technology</a>
+                                    <button className="nav-link btn btn-link" id="nav8" style={{'textAlign':'center'}} onClick={() => { this.category('technology') }}>Technology</button>
                                 </li>
 
                             </ul>

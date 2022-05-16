@@ -24,7 +24,7 @@ export default class News extends Component {
     async componentDidMount() {
         this.props.setProgress(0);
         
-        let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=a6c1a3fd72304b98ad6668e52da97235`;
+        let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=2886dcdf2c4145e1973338a66ab7b243`;
         
         let data = await fetch(url);
         let parseData = await data.json();
@@ -41,7 +41,7 @@ export default class News extends Component {
                 page:1
                 }) 
                 this.props.setProgress(0);
-                let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}${this.props.category===''?'':'&category='}${this.props.category===''?'':this.props.category}&apiKey=a6c1a3fd72304b98ad6668e52da97235`;
+                let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}${this.props.category===''?'':'&category='}${this.props.category===''?'':this.props.category}&apiKey=2886dcdf2c4145e1973338a66ab7b243`;
                 
                 let data = await fetch(url);
                 let parseData = await data.json();
@@ -57,7 +57,7 @@ export default class News extends Component {
                 categoryState:this.props.category
             })  
                 this.props.setProgress(0);
-                let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}${this.props.category===''?'':'&category='}${this.props.category===''?'':this.props.category}&apiKey=a6c1a3fd72304b98ad6668e52da97235`;
+                let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}${this.props.category===''?'':'&category='}${this.props.category===''?'':this.props.category}&apiKey=2886dcdf2c4145e1973338a66ab7b243`;
                 
                 let data = await fetch(url);
                 let parseData = await data.json();
@@ -75,7 +75,7 @@ export default class News extends Component {
         document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   this.props.setProgress(0);
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}${this.props.category===''?'':'&category='}${this.props.category===''?'':this.props.category}&apiKey=a6c1a3fd72304b98ad6668e52da97235&page=${this.state.page+1}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}${this.props.category===''?'':'&category='}${this.props.category===''?'':this.props.category}&apiKey=2886dcdf2c4145e1973338a66ab7b243&page=${this.state.page+1}`;
         
         let data = await fetch(url);
         let parseData = await data.json();
@@ -90,12 +90,12 @@ export default class News extends Component {
 
         
     }
-    handlePrevClick = async () => {
+    handlePrevClick = async () => { 
         document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   this.props.setProgress(0);
       
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}${this.props.category===''?'':'&category='}${this.props.category===''?'':this.props.category}&apiKey=a6c1a3fd72304b98ad6668e52da97235&page=${this.state.page-1}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}${this.props.category===''?'':'&category='}${this.props.category===''?'':this.props.category}&apiKey=2886dcdf2c4145e1973338a66ab7b243&page=${this.state.page-1}`;
         let data = await fetch(url);
         let parseData = await data.json();
         this.setState({
@@ -125,8 +125,8 @@ export default class News extends Component {
 
                     </div>
                     <div className="container d-flex justify-content-between">
-                        <button id="bprev" type="button" className="btn btn-dark" onClick={this.handlePrevClick} disabled={this.state.page<=1}>&larr;Previous</button>
-                        <button id="bnext" type="button" className="btn btn-dark" onClick={this.handleNextClick} disabled={this.state.page>=this.state.noOfPages}>Next&rarr;</button>
+                        <button id="bprev" type="button" className="btn btn-dark prevnextbutton" onClick={this.handlePrevClick} disabled={this.state.page<=1}>&larr;Previous</button>
+                        <button id="bnext" type="button" className="btn btn-dark prevnextbutton" onClick={this.handleNextClick} disabled={this.state.page>=this.state.noOfPages}>Next&rarr;</button>
                     </div>
                 </div>
             </>

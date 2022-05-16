@@ -21,10 +21,16 @@ body{
   font-weight: 500;
 
 }
-button:hover{
+#dropdownMenuButton1:hover{
   color:black !important;
   background-color: #f5d20e !important;
   font-weight: 600;
+}
+.prevnextbutton:hover{
+  color:black !important;
+  background-color: #f5d20e !important;
+  font-weight: 600;
+  border: #f5d20e;
 }
 .card{
   border-radius: 10px;
